@@ -10,6 +10,7 @@
             $this -> precio = $precio;
             $this -> cantidad = $cantidad;
             $this -> disponible = $disponible;
+            
 
         }
 

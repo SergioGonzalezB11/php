@@ -74,9 +74,24 @@ $productos = [
         </table>
     </div>
     <div>
-        <?php foreach($productos as $producto):?>
-            <p><?php echo $producto-> getNombre();?></p>
-            <?php endforeach?>
+        <table>
+            <thead>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Disponibilidad</th>
+            </thead>
+            <tbody>
+                <?php foreach($productos as $producto):?>
+                    <tr>
+                        <td><?php echo $producto-> getNombre();?></td>
+                        <td><?php echo $producto-> getPrecio();?></td>
+                        <td><?php echo $producto-> getCantidad();?></td>
+                        <td><?php echo ($producto -> getDisponible()) ? 'Disponible':'No disponible';?> </td>
+                    </tr>
+                    <?php endforeach?>
+            </tbody>
+        </table>  
     </div>
 </body>
 </html>    
